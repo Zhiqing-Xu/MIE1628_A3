@@ -1,0 +1,60 @@
+==================================================
+Step_code:  CLF_general
+epoch_num:  10
+learning_rate:  5e-05
+batch_size:  256
+NN_type:  Clf
+hid_1:  4096
+hid_2:  4096
+hid_3:  2048
+==================================================
+data set size:  494021
+train set size:  444618
+valid set size:  24701
+test set size:  24702
+X dimendion:  6
+target_list:  tensor([1, 1, 1,  ..., 0, 1, 1])
+class_weights:  tensor([1.1422e-05, 2.8006e-06])
+NUM_FEATURES:  6
+cuda:0
+MulticlassClassification(
+  (layer_1): Linear(in_features=6, out_features=4096, bias=True)
+  (layer_2): Linear(in_features=4096, out_features=4096, bias=True)
+  (layer_3): Linear(in_features=4096, out_features=2048, bias=True)
+  (layer_out): Linear(in_features=2048, out_features=2, bias=True)
+  (relu): ReLU()
+  (dropout): Dropout(p=0.6, inplace=False)
+  (batchnorm1): BatchNorm1d(4096, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (batchnorm2): BatchNorm1d(4096, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (batchnorm3): BatchNorm1d(2048, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+)
+Begin training.
+
+ Epoch 001: | Train Loss: 0.19448 | Valid Loss: 0.14929 | Train Acc: 96.181| Valid Acc: 96.845
+
+ Epoch 002: | Train Loss: 0.12628 | Valid Loss: 0.06814 | Train Acc: 97.071| Valid Acc: 98.381
+
+ Epoch 003: | Train Loss: 0.07287 | Valid Loss: 0.04304 | Train Acc: 98.162| Valid Acc: 98.124
+
+ Epoch 004: | Train Loss: 0.06074 | Valid Loss: 0.04589 | Train Acc: 98.344| Valid Acc: 98.588
+
+ Epoch 005: | Train Loss: 0.05332 | Valid Loss: 0.03440 | Train Acc: 98.469| Valid Acc: 98.557
+
+ Epoch 006: | Train Loss: 0.04998 | Valid Loss: 0.03144 | Train Acc: 98.509| Valid Acc: 98.814
+
+ Epoch 007: | Train Loss: 0.04816 | Valid Loss: 0.02782 | Train Acc: 98.546| Valid Acc: 99.113
+
+ Epoch 008: | Train Loss: 0.04483 | Valid Loss: 0.03304 | Train Acc: 98.642| Valid Acc: 98.577
+
+ Epoch 009: | Train Loss: 0.04179 | Valid Loss: 0.02803 | Train Acc: 98.674| Valid Acc: 98.495
+
+ Epoch 010: | Train Loss: 0.04063 | Valid Loss: 0.02763 | Train Acc: 98.692| Valid Acc: 98.722
+              precision    recall  f1-score   support
+
+           0       0.94      1.00      0.97      4864
+           1       1.00      0.99      0.99     19838
+
+    accuracy                           0.99     24702
+   macro avg       0.97      0.99      0.98     24702
+weighted avg       0.99      0.99      0.99     24702
+
